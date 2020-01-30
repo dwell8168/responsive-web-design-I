@@ -1,3 +1,114 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+#container {
+    padding: 0 22.5rem;
+
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .htext {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .banner button {
+    padding: .5rem 3.5rem;
+  }
+  .bannerImg {
+    width: 45%;
+    
+  }
+  .bannerImg img {
+    width: 100%;
+  }
+  .cards {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .medium {
+    width: 48%;
+  }
+  .large {
+    width: 100%;
+  }
+  .large img {
+    width: 100%;
+  }
+  .small {
+    width: 32%;
+  }
+  .medium, .small {
+    margin: 3rem 0;
+  }
+  .contact {
+    padding: 3rem 0;
+  }
+  #spacer {
+    margin-top: 2rem;
+  }
+  footer {
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+
+  @media (max-width: 800px) {
+    header nav {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .htext {
+        width: 32%;
+        display:inline;
+    }
+
+    .banner {
+        width: 40%;
+    }
+
+    .bannerIMG {
+        width: 40%;
+    }
+
+    .cards {
+        width: 20%;
+    }
+
+    .medium {
+        width: 80%;
+    }
+
+    .large {
+        width: 100%;
+    }
+
+    .large img {
+        width: 30%;
+    }
+
+    .small {
+        width: 40%;
+    }
+
+
+}  
+}
+
+
 
 
