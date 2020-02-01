@@ -1,114 +1,222 @@
-#container {
-    padding: 0 22.5rem;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header nav {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .banner {
-    display: flex;
-    align-items: center;
-    margin-top: 4rem;
-  }
-  .htext {
-    width: 55%;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    /* background-color: red; */
     align-items: center;
-    text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+#container {
+    display: flex;
+    flex-direction: column;
+    /*background-color: blue;*/
+    align-items: center;
+    width: 80%;
+
+  }
+ 
+  header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  header nav {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	/* border: .1rem solid blue; */
+  }
+  .banner {
+	display: flex;
+	align-items: center;
+	margin-top: 4rem;
+  }
+  .htext {
+	font-size: 70px;
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	/* border: .1rem solid blue; */
   }
   .banner button {
-    padding: .5rem 3.5rem;
+	padding: .5rem 3.5rem;
   }
   .bannerImg {
-    width: 45%;
-    
+	width: 45%;
+	/* border: .1rem solid blue; */
   }
   .bannerImg img {
-    width: 100%;
+	width: 100%;
   }
   .cards {
-    margin-top: 4rem;
-    display: flex;
-    flex-wrap: wrap;
+	margin-top: 4rem;
+	display: flex;
+	flex-wrap: wrap;
   }
   .medium {
-    width: 48%;
+	width: 48%;
   }
   .large {
-    width: 100%;
+	width: 100%;
   }
   .large img {
-    width: 100%;
+	width: 100%;
   }
   .small {
-    width: 32%;
+	width: 32%;
   }
   .medium, .small {
-    margin: 3rem 0;
+	margin: 3rem 0;
   }
   .contact {
-    padding: 3rem 0;
+	padding: 3rem 0;
   }
   #spacer {
-    margin-top: 2rem;
+	margin-top: 2rem;
   }
   footer {
-    padding: 3rem 0 2rem;
-    text-align: center;
+	padding: 3rem 0 2rem;
+	text-align: center;
   }
 
   @media (max-width: 800px) {
-    header nav {
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-    }
+      header {
+          flex-direction: column-reverse;
+          width: 100%;
+          margin: 1.6rem 0;
+          
+      
+        }
 
-    .htext {
-        width: 32%;
-        display:inline;
-    }
+      header nav {
+          width: 100%;
+          margin: 1.6rem 0;
 
-    .banner {
-        width: 40%;
-    }
+      }
 
-    .bannerIMG {
-        width: 40%;
-    }
+      .bannerImg {
+          display: none;
 
-    .cards {
-        width: 20%;
-    }
+      }
 
-    .medium {
-        width: 80%;
-    }
+      .htext {
+          width: 100%;
+      }
 
-    .large {
-        width: 100%;
-    }
+      @media (max-width: 500px) {
+          header {
+              flex-direction: column-reverse;
+              width: 100%;
+          }
 
-    .large img {
-        width: 30%;
-    }
+          header nav {
+              flex-direction: column;
+              align-items: center;
+              justify-content: stretch;
+              font-size: 30px;
+              width: 100%;
+              
+          }
 
-    .small {
-        width: 40%;
-    }
+          .htext {
+              border-bottom-style: solid;
+              border-bottom-width: medium;
+          }
+
+          .cards .medium {
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+          }
+
+          .large {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+          }
+
+          .cards .small {
+              flex-direction: column;
+              align-items: center;
+              width: 100%;   
+          }
+
+          .contact {
+              width: 100%;
+          }
+
+      }
 
 
-}  
-}
-
-
-
-
+  }
+  
+  
+  
